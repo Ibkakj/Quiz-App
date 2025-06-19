@@ -90,3 +90,10 @@ if (result) {
     }
   }, 1000);
 }
+const startQuizBtn = document.getElementById("start-btn");
+if (startQuizBtn) {
+  startQuizBtn.addEventListener("click", () => {
+    localStorage.setItem("quizQuestions", JSON.stringify(sampleQuestions));
+    window.location.href = "quizes.html";
+  });
+}
